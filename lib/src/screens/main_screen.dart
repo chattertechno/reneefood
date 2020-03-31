@@ -5,6 +5,8 @@ class HomeScreen extends StatefulWidget {
   _HomeScreenState createState() => _HomeScreenState();
 }
 
+final textStyle = TextStyle(fontSize: 32.0, fontWeight: FontWeight.bold,);
+
 class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
@@ -12,10 +14,13 @@ class _HomeScreenState extends State<HomeScreen> {
       body: ListView(
         children: <Widget>[
           Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
-              Column(children: <Widget>[
-                Text("What would"),
-                Text("you like to eat?")
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>[
+                Text("What would", style:textStyle),
+                Text("you like to eat?", style: textStyle,),
                ],
               ),
               Icon(Icons.notifications),
